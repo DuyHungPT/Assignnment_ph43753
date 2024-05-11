@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+    tools:context=".Login">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/add_user"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ten Dang Nhap" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_marginBottom="20dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:hint="Mat Khau" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <CheckBox
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Luu Mat Khau"
+        android:id="@+id/chkRememberPass"
+        android:layout_marginBottom="20dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        >
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dang Nhap"/>
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Huy"/>
+
+
+    </LinearLayout>
+</LinearLayout>

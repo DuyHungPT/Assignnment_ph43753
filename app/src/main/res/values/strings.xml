@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Assignnment</string>
+
+    <string name="Home">Home</string>
+    <string name="LoaiSach">LoaiSach</string>
+    <string name="Sach">Sach</string>
+    <string name="ThanhVien">ThanhVien</string>
+    <string name="ThuThu">ThuThu</string>
+    <string name="ThongKe">ThongKe</string>
+    <string name="Doimatkhau">Doi Mat Khau</string>
+    <string name="DangXuat">DangXuat</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

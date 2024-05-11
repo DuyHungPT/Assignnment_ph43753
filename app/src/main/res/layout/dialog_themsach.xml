@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Them Sach"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/edtTenSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap ten sach"/>
+    <EditText
+        android:id="@+id/edtTien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap tien"/>
+     <Spinner
+         android:id="@+id/spnLoaiSach"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_PhieuMuon"
+            android:icon="@drawable/add_user"
+            android:title="Quan Ly Phieu Muon" />
+        <item android:id="@+id/nav_LoaiSach"
+            android:icon="@drawable/add_user"
+            android:title="Quan Ly Loai Sach" />
+        <item android:id="@+id/nav_Sach"
+            android:icon="@drawable/add_user"
+            android:title="Quan Ly Sach" />
+        <item android:id="@+id/nav_ThanhVien"
+            android:icon="@drawable/add_user"
+            android:title="Quan Ly ThanhVien" />
+        <item android:title="Thong Ke">
+            <menu>
+                <item android:id="@+id/sub_Top"
+                    android:icon="@drawable/add_user"
+                    android:title="10 Sach muon nhieu nhat"/>
+                <item android:id="@+id/sub_DoanhThu"
+                    android:icon="@drawable/add_user"
+                    android:title="Doanh Thu" />
+            </menu>
+        </item>
+        <item android:title="Nguoi Dung">
+            <menu>
+                <item android:id="@+id/sub_AddUser"
+                    android:icon="@drawable/add_user"
+                    android:title="Them Nguoi Dung"/>
+                <item android:id="@+id/sub_Pass"
+                    android:icon="@drawable/add_user"
+                    android:title="Doi mat Khau" />
+                <item android:id="@+id/sub_Logout"
+                    android:icon="@drawable/add_user"
+                    android:title="Dang xuat"/>
+            </menu>
+        </item>
+    </group>
+</menu>

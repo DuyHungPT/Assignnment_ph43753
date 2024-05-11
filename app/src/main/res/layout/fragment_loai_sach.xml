@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.LoaiSachFragment"
+    android:gravity="center"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Them Loai Sach"
+        android:textSize="24dp"
+        />
+    <EditText
+        android:id="@+id/edtLoaiSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="Nhap ten sach" />
+    <Button
+        android:id="@+id/btnThem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C23FD8"
+        android:text="Them" />
+    <Button
+        android:id="@+id/btnSua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#DACA3F"
+        android:text="Sua" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Them loai sach"
+        android:textColor="@color/black"
+        android:textSize="24dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleLoaiSach"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

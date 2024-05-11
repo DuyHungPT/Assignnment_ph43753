@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <group android:checkableBehavior="single">
+
+      <item android:id="@+id/nav_home"
+          android:title="@string/Home"
+          android:icon="@drawable/baseline_home_24"
+          />
+      <item android:id="@+id/nav_Sach"
+          android:title="Sach"
+          android:icon="@drawable/baseline_menu_book_24"
+          />
+      <item android:id="@+id/nav_ThanhVien"
+          android:title="ThanhVien"
+          android:icon="@drawable/add_user"
+          />
+      <item android:id="@+id/nav_PhieuMuon"
+          android:title="phieu Muon"
+          android:icon="@drawable/baseline_menu_book_24"
+          />
+      <item android:id="@+id/nav_Top10"
+          android:title="Top 10"
+          android:icon="@drawable/revenue"
+          />
+      <item android:id="@+id/nav_DoanhThu"
+          android:title="Doanh Thu"
+          android:icon="@drawable/revenue"
+          />
+  </group>
+    <item android:title="@string/ThongKe" >
+
+        <menu >
+            <item android:id="@+id/nav_LoaiSach"
+                android:title="@string/LoaiSach"
+                android:icon="@drawable/book"
+                />
+            <item android:id="@+id/nav_DoiMK"
+                android:title="@string/Doimatkhau"
+                android:icon="@drawable/reset_password"
+                />
+            <item android:id="@+id/nav_DangXuat"
+                android:title="@string/DangXuat"
+                android:icon="@drawable/reset_password"
+                />
+        </menu>
+    </item>
+</menu>
