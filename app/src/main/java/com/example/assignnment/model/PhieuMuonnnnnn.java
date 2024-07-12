@@ -16,10 +16,15 @@ public class PhieuMuonnnnnn {
     private String tentt;
     private String tenSach;
 
+    private String bienLai;
+
+
+
+
     public PhieuMuonnnnnn() {
     }
 
-    public PhieuMuonnnnnn(int maPM,int maTV, String tentv, String maTT,String tentt,  int maSach, String tenSach, String ngay,int traSach, int tienThue ) {
+    public PhieuMuonnnnnn(int maPM,int maTV, String tentv, String maTT,String tentt,  int maSach, String tenSach, String ngay,int traSach, int tienThue , String bienLai) {
         this.maPM = maPM;
         this.maTT = maTT;
         this.maTV = maTV;
@@ -30,16 +35,21 @@ public class PhieuMuonnnnnn {
         this.tentv = tentv;
         this.tentt = tentt;
         this.tenSach = tenSach;
+        this.bienLai = bienLai;
+
     }
 
-    public PhieuMuonnnnnn( int maTV, String maTT, int maSach, String ngay, int traSach,int tienThue) {
+    public PhieuMuonnnnnn( int maTV, String maTT, int maSach, String ngay, int traSach,int tienThue,String bienLai) {
         this.maTV = maTV;
         this.maTT = maTT;
         this.maSach = maSach;
         this.ngay = ngay;
         this.traSach = traSach;
         this.tienThue = tienThue;
+        this.bienLai = bienLai;
+
     }
+
 
     public int getMaPM() {
         return maPM;
@@ -119,5 +129,13 @@ public class PhieuMuonnnnnn {
 
     public void setTenSach(String tenSach) {
         this.tenSach = tenSach;
+    }
+
+    public String getBienLai() {
+        return bienLai;
+    }
+
+    public void setBienLai(String bienLai) {
+        this.bienLai = bienLai;
     }
 }

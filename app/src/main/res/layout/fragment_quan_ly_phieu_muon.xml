@@ -4,11 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/edtSearchTenTV"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Nhập tên sach để tìm kiếm" />
+
+        <Button
+            android:backgroundTint="#EC407A"
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tìm kiếm" />
+    </LinearLayout>
+
+
+
    
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerQLPhieuMuon"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floadAdd"
@@ -17,7 +43,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/add_user"
 
-         android:backgroundTint="#303030"
+         android:backgroundTint="@android:color/holo_blue_dark"
           android:padding="5dp"
        android:text="Thêm phiếu mượn +"
        android:textAllCaps="false"
@@ -25,6 +51,7 @@
        android:layout_marginRight="20dp"
        android:layout_marginLeft="20dp"
         android:layout_marginBottom="10dp"
+        android:src="@drawable/add_user"
          android:textColor="@color/white"
        app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="20dp" />

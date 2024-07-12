@@ -24,6 +24,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nhap tien"/>
+    <EditText
+        android:id="@+id/edtNxb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap Nxb"/>
+    <EditText
+        android:id="@+id/edtsoTrang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap soTrang"/>
      <Spinner
          android:id="@+id/spnLoaiSach"
          android:layout_width="match_parent"

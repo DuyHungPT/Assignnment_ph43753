@@ -16,13 +16,14 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.assignnment.dao.ThuThuDAO;
+import com.example.assignnment.fragment.CartFragment;
 import com.example.assignnment.fragment.ChangePassFragment;
 import com.example.assignnment.fragment.LoaiSachFragment;
 import com.example.assignnment.fragment.QLSachFragment;
 import com.example.assignnment.fragment.QLThanhVienFragment;
 import com.example.assignnment.fragment.QuanLyPhieuMuonFragment;
-import com.example.assignnment.fragment.SachFragment;
-import com.example.assignnment.fragment.ThanhVienFragment;
+
+
 import com.example.assignnment.fragment.ThongKeDoanhThuFragment;
 import com.example.assignnment.fragment.ThongKeTop10Fragment;
 import com.google.android.material.navigation.NavigationView;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     private static final int FRAGMENT_SACH = 0;
-    private static final int FRAGMENT_HOME = 1;
+    private static final int FRAGMENT_GIOHANG = 1;
     private static final int FRAGMENT_THANHVIEN = 2;
     private static final int FRAGMENT_DOIMK = 3;
     private static final int FRAGMENT_PHIEUMUON = 4;
@@ -121,6 +122,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             if (mCurrentFragment != FRAGMENT_DOANHTHU){
                 replaceFragment(new ThongKeDoanhThuFragment());
                 mCurrentFragment = FRAGMENT_DOANHTHU;
+            }
+        }
+        else if (id== R.id.nav_GioHang){
+            if (mCurrentFragment != FRAGMENT_GIOHANG){
+                replaceFragment(new CartFragment());
+                mCurrentFragment = FRAGMENT_GIOHANG;
             }
         }
 

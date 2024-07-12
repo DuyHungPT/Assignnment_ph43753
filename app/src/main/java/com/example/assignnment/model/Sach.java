@@ -8,28 +8,45 @@ public class Sach {
     private int soluongdamuon;
     private String tenloai;
 
-    public Sach() {
-    }
+    private String nxb;
 
-    public Sach(int maSach, String tenSach, int giaThue, int maLoai) {
+    private String hung;
+    private String soTrang;
+
+
+    public Sach(int maSach, String tenSach, int giaThue, int maLoai, int soluongdamuon, String tenloai, String nxb,String hung,String soTrang) {
         this.maSach = maSach;
         this.tenSach = tenSach;
         this.giaThue = giaThue;
         this.maLoai = maLoai;
-    }
-
-    public Sach(int maSach, String tenSach, int soluongdamuon) {
-        this.maSach = maSach;
-        this.tenSach = tenSach;
         this.soluongdamuon = soluongdamuon;
+        this.tenloai = tenloai;
+        this.nxb = nxb;
+        this.hung = hung;
+        this.soTrang = soTrang;
     }
-
-    public Sach(int maSach, String tenSach, int giaThue, int maLoai, String tenloai) {
+    public Sach(int maSach, String tenSach, int giaThue, int maLoai, String tenloai, String nxb,String soTrang) {
         this.maSach = maSach;
         this.tenSach = tenSach;
         this.giaThue = giaThue;
         this.maLoai = maLoai;
         this.tenloai = tenloai;
+        this.nxb = nxb;
+        this.soTrang = soTrang;
+    }
+    public Sach(int maSach, String tenSach, int soluongdamuon, String tenloai) {
+        this.maSach = maSach;
+        this.tenSach = tenSach;
+        this.soluongdamuon = soluongdamuon;
+        this.tenloai = tenloai;
+    }
+    public Sach(int maSach, String tenSach, int giaThue) {
+        this.maSach = maSach;
+        this.tenSach = tenSach;
+        this.giaThue = giaThue;
+    }
+
+    public Sach() {
     }
 
     public int getMaSach() {
@@ -68,6 +85,10 @@ public class Sach {
         return soluongdamuon;
     }
 
+    public void setSoluongdamuon(int soluongdamuon) {
+        this.soluongdamuon = soluongdamuon;
+    }
+
     public String getTenloai() {
         return tenloai;
     }
@@ -76,7 +97,27 @@ public class Sach {
         this.tenloai = tenloai;
     }
 
-    public void setSoluongdamuon(int soluongdamuon) {
-        this.soluongdamuon = soluongdamuon;
+    public String getNxb() {
+        return nxb;
+    }
+
+    public void setNxb(String nxb) {
+        this.nxb = nxb;
+    }
+
+    public String getHung() {
+        return hung;
+    }
+
+    public void setHung(String hung) {
+        this.hung = hung;
+    }
+
+    public String getSoTrang() {
+        return soTrang;
+    }
+
+    public void setSoTrang(String soTrang) {
+        this.soTrang = soTrang;
     }
 }

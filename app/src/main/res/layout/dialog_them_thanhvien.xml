@@ -26,5 +26,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nhap Nam Sinh"/>
+    <EditText
+        android:id="@+id/edtCccd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap CCCCD"/>
+    <EditText
+        android:id="@+id/edthaHa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhap HaHa"/>
 
 </LinearLayout>

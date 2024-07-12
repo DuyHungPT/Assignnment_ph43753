@@ -26,6 +26,10 @@
           android:title="Doanh Thu"
           android:icon="@drawable/revenue"
           />
+      <item android:id="@+id/nav_GioHang"
+          android:title="GioHang"
+          android:icon="@drawable/humanbee"
+          />
   </group>
     <item android:title="@string/ThongKe" >
 

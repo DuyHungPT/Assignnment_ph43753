@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
@@ -19,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.assignnment.R;
 import com.example.assignnment.adapter.SachhhhhAdapter;
+import com.example.assignnment.dao.GioHangDAO;
 import com.example.assignnment.dao.LoaiSaDAO;
 import com.example.assignnment.dao.LoaiSachDAO;
 import com.example.assignnment.dao.SachhDDAO;
@@ -32,6 +34,7 @@ import java.util.HashMap;
 public class QLSachFragment extends Fragment {
     SachhDDAO sachhDDAO;
     RecyclerView recyclerSach;
+    GioHangDAO gioHangDAO;
 
     @Nullable
     @Override
@@ -42,7 +45,11 @@ public class QLSachFragment extends Fragment {
 
         FloatingActionButton floadAdd = view.findViewById(R.id.floadAdd);
 
+
          sachhDDAO = new SachhDDAO(getContext());
+
+        gioHangDAO = new GioHangDAO(getContext());
+
          loadData();
 
 
@@ -53,15 +60,36 @@ public class QLSachFragment extends Fragment {
 
             }
         });
+
+        EditText edtSearch = view.findViewById(R.id.edtSearch);
+        Button btnSearch = view.findViewById(R.id.btnSearch);
+
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String keyword = edtSearch.getText().toString().trim();
+                loadData(keyword);
+            }
+        });
+
+
         return view;
     }
     private void  loadData(){
         ArrayList<Sach> list = sachhDDAO.getDSDauSach();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerSach.setLayoutManager(linearLayoutManager);
-        SachhhhhAdapter adapter = new SachhhhhAdapter(getContext(),list, getDSLoaiSach(),sachhDDAO);
+        SachhhhhAdapter adapter = new SachhhhhAdapter(getContext(),list, getDSLoaiSach(),sachhDDAO,gioHangDAO);
         recyclerSach.setAdapter(adapter);
     }
+    private void loadData(String keyword) {
+        ArrayList<Sach> list = sachhDDAO.timKiemSachTheoTen(keyword);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        recyclerSach.setLayoutManager(linearLayoutManager);
+        SachhhhhAdapter adapter = new SachhhhhAdapter(getContext(), list, getDSLoaiSach(), sachhDDAO,gioHangDAO);
+        recyclerSach.setAdapter(adapter);
+    }
+
     private  void  showDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         LayoutInflater inflater = getLayoutInflater();
@@ -70,6 +98,12 @@ public class QLSachFragment extends Fragment {
 
         EditText edtTenSach = view.findViewById(R.id.edtTenSach);
         EditText edtTien = view.findViewById(R.id.edtTien);
+        ///////////////////////////////////////////////////////////
+        EditText edtNxb = view.findViewById(R.id.edtNxb);
+        EditText edtsoTrang = view.findViewById(R.id.edtsoTrang);
+
+
+
         Spinner spnLoaiSach  = view.findViewById(R.id.spnLoaiSach);
 
         SimpleAdapter simpleAdapter = new SimpleAdapter(
@@ -85,10 +119,14 @@ public class QLSachFragment extends Fragment {
             public void onClick(DialogInterface dialog, int id) {
                  String tenSach = edtTenSach.getText().toString();
                 int tien =Integer.parseInt(edtTien.getText().toString()) ;
+                /////////////////////////////////////////////////////
+                String nxb = edtNxb.getText().toString();
+                String soTrang = edtsoTrang.getText().toString();
 
                 HashMap<String,Object> hs = (HashMap<String, Object>) spnLoaiSach.getSelectedItem();
                 int maLoai = (int) hs.get("maLoai");
-                boolean check = sachhDDAO.themSachMoi(tenSach,tien,maLoai);
+                                               ////////////////////////////////////////////////////////////
+                boolean check = sachhDDAO.themSachMoi(tenSach,tien,maLoai,nxb,soTrang);
 
             if (check){
                 Toast.makeText(getContext(), "Them thanh cong", Toast.LENGTH_SHORT).show();

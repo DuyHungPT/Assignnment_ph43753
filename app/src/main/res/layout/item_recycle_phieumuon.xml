@@ -8,58 +8,105 @@
 
     >
   <LinearLayout
-      android:background="#CC05ED"
-      android:orientation="vertical"
-      android:padding="10dp"
       android:layout_width="match_parent"
-      android:layout_height="match_parent">
-      <TextView
-          android:id="@+id/txtMaPM"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"/>
-      <TextView
-          android:id="@+id/txtMaTV"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"/>
-      <TextView
-          android:id="@+id/txtTenTV"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"/>
-      <TextView
-          android:id="@+id/txtMaTT"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"/>
-      <TextView
-          android:id="@+id/txtTenTT"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"/>
-      <TextView
-          android:id="@+id/txtMaSach"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"/>
-      <TextView
-          android:id="@+id/txtTenSach"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"/>
-      <TextView
-          android:id="@+id/txtNgay"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"/>
-      <TextView
-          android:id="@+id/txTrangThai"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"/>
-      <TextView
-          android:id="@+id/txtTienThue"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"/>
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:background="#CC05ED"
+      >
+      <LinearLayout
 
-      <Button
-          android:id="@+id/btnTraSach"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:text="Tra Sach"/>
+          android:orientation="vertical"
+          android:padding="10dp"
+          android:layout_width="300dp"
+          android:layout_height="wrap_content">
+          <TextView
+              android:id="@+id/txtMaPM"
+              android:textColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:id="@+id/txtMaTV"
+              android:textColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:id="@+id/txtTenTV"
+              android:textColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:id="@+id/txtMaTT"
+              android:textColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:id="@+id/txtTenTT"
+              android:textColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:id="@+id/txtMaSach"
+              android:textColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:id="@+id/txtTenSach"
+              android:textColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:id="@+id/txtNgay"
+              android:textColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:id="@+id/txTrangThai"
+              android:textColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:id="@+id/txtTienThue"
+              android:textColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:id="@+id/txtbienLai"
+              android:textColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
 
+
+          <Button
+              android:id="@+id/btnTraSach"
+              android:textColor="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:backgroundTint="@android:color/holo_orange_dark"
+              android:text="Tra Sach"/>
+
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="100dp"
+          android:layout_height="300dp"
+          android:orientation="vertical"
+          >
+          <Button
+              android:id="@+id/btnDelete"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:backgroundTint="@android:color/holo_red_light"
+
+              android:text="Xóa" />
+          <Button
+              android:id="@+id/btnUpdate"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:backgroundTint="@android:color/holo_blue_bright"
+
+              android:text="Sua" />
+      </LinearLayout>
   </LinearLayout>
 
 
